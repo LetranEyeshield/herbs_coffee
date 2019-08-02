@@ -18,7 +18,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class CoffeeGui extends JFrame implements ActionListener{
+public class CoffeeGui extends JFrame implements ActionListener, KeyListener{
 	
 	JLabel label;
 	JLabel[] imageLabel=new JLabel[8];
@@ -84,6 +84,8 @@ public class CoffeeGui extends JFrame implements ActionListener{
 		TheTotal.setBounds(1100,300,80,30);
 		TheTotal.addActionListener(this);
 		add(TheTotal);
+		
+		QuantitySmall[0].addKeyListener(this);
 		
 		
 	}
@@ -955,18 +957,26 @@ if(morielBrown.isSelected()) {
 	
 	
 	public void preCompute() {
+	
 		
 if(brainCapuccino.isSelected()) {
 			
 			
 			if(small[0].isSelected()) {
 				
-				getQuantityValues=QuantitySmall[0].getText().toString();
-				//increment
-				getQuantities[0]=Integer.parseInt(QuantitySmall[0].getText().toString());
-				//increment
-				price[0]=getQuantities[0]*25;
-				total+=price[0];
+				if(QuantitySmall[0].getText().toString().equals("")) {
+					getQuantities[0]=Integer.parseInt(QuantitySmall[0].getText().toString());
+					getQuantities[0]=0;
+				}else {
+					getQuantityValues=QuantitySmall[0].getText().toString();
+					//increment
+					getQuantities[0]=Integer.parseInt(QuantitySmall[0].getText().toString());
+					//increment
+					price[0]=getQuantities[0]*25;
+					total+=price[0];
+				}
+				
+				
 				
 			}
 			if(medium[0].isSelected()) {
@@ -1334,6 +1344,27 @@ public void prepareLabelTransaction(String str, int xpos, int ypos, int width, i
 		// TODO Auto-generated method stub
 		compute();
 		clearFields();
+	}
+
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
