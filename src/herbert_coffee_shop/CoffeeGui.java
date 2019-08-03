@@ -302,7 +302,7 @@ public void largeCheckBoxesCold(int i,int xpos,int ypos,int width,int height) {
 		QuantitySmall[i] = new JTextField();
 		QuantitySmall[i].setBounds(xpos,ypos,width,height);
 		QuantitySmall[i].setOpaque(true);
-		QuantitySmall[i].setText("0");
+		//QuantitySmall[i].setText("0");
 		
 		panel1.add(QuantitySmall[i]);
 		
@@ -965,7 +965,7 @@ if(brainCapuccino.isSelected()) {
 			if(small[0].isSelected()) {
 				
 				if(QuantitySmall[0].getText().toString().equals("")) {
-					getQuantities[0]=Integer.parseInt(QuantitySmall[0].getText().toString());
+					//getQuantities[0]=Integer.parseInt(QuantitySmall[0].getText().toString());
 					getQuantities[0]=0;
 				}else {
 					getQuantityValues=QuantitySmall[0].getText().toString();
@@ -976,295 +976,12 @@ if(brainCapuccino.isSelected()) {
 					total+=price[0];
 				}
 				
+				getTextTotal=""+total;
 				
-				
-			}
-			if(medium[0].isSelected()) {
-				
-				getQuantityValues=QuantityMedium[0].getText().toString();
-				getQuantities[1]=Integer.parseInt(QuantityMedium[0].getText().toString());
-				price[1]=getQuantities[1]*35;
-				total+=price[1];
-				
-			}
-			if(large[0].isSelected()) {
-				
-				getQuantityValues=QuantityLarge[0].getText().toString();
-				getQuantities[2]=Integer.parseInt(QuantityLarge[0].getText().toString());
-				price[2]=getQuantities[2]*45;
-				total+=price[2];
-			
-			}
-			
-			
-		}
-		
-		
-if(shitenEspresso.isSelected()) {
-		
-			
-			if(small[1].isSelected()) {
-			
-				getQuantityValues=QuantitySmall[1].getText().toString();
-				getQuantities[3]=Integer.parseInt(QuantitySmall[1].getText().toString());
-				price[3]=getQuantities[3]*30;
-				total+=price[3];
-				
-			}
-			if(medium[1].isSelected()) {
-				
-				getQuantityValues=QuantityMedium[1].getText().toString();
-				getQuantities[4]=Integer.parseInt(QuantityMedium[1].getText().toString());
-				price[4]=getQuantities[4]*40;
-				total+=price[4];
-			
-			}
-			if(large[1].isSelected()) {
-				
-				getQuantityValues=QuantityLarge[1].getText().toString();
-				getQuantities[5]=Integer.parseInt(QuantityLarge[1].getText().toString());
-				price[5]=getQuantities[5]*50;
-				total+=price[5];
-				
-			}
-			
-		
-			
-		
-		}
-
-		
-		if(mikeLatte.isSelected()) {
-			
-			
-			if(small[2].isSelected()) {
-			
-				//increment
-				getQuantityValues=QuantitySmall[2].getText().toString();
-				//increment
-				getQuantities[6]=Integer.parseInt(QuantitySmall[2].getText().toString());
-				//increment
-				price[6]=getQuantities[6]*20;
-				total+=price[6];
-				
-			}
-			if(medium[2].isSelected()) {
-			
-				//increment
-				getQuantityValues=QuantityMedium[2].getText().toString();
-				//increment
-				getQuantities[7]=Integer.parseInt(QuantityMedium[2].getText().toString());
-				//increment
-				price[7]=getQuantities[7]*30;
-				total+=price[7];
-				
-			}
-			
-			if(large[2].isSelected()) {
-			
-				//increment
-				getQuantityValues=QuantityLarge[2].getText().toString();
-				//increment
-				getQuantities[8]=Integer.parseInt(QuantityLarge[2].getText().toString());
-				//increment
-				price[8]=getQuantities[8]*40;
-				total+=price[8];
-				
-			}
-			
-			
-		}
-		
-		
-if(jheBlack.isSelected()) {
-			
-			
-			if(small[3].isSelected()) {
-			
-				//increment
-				getQuantityValues=QuantitySmall[3].getText().toString();
-				//increment
-				getQuantities[9]=Integer.parseInt(QuantitySmall[3].getText().toString());
-				//increment
-				price[9]=getQuantities[9]*30;
-				total+=price[9];
-			
-			}
-			if(medium[3].isSelected()) {
-			
-				//increment
-				getQuantityValues=QuantityMedium[3].getText().toString();
-				//increment
-				getQuantities[10]=Integer.parseInt(QuantityMedium[3].getText().toString());
-				//increment
-				price[10]=getQuantities[10]*35;
-				total+=price[10];
-				
-			}
-			
-			if(large[3].isSelected()) {
-			
-				//increment
-				getQuantityValues=QuantityLarge[3].getText().toString();
-				//increment
-				getQuantities[11]=Integer.parseInt(QuantityLarge[3].getText().toString());
-				//increment
-				price[11]=getQuantities[11]*40;
-				total+=price[11];
-				
+				textTotal.setText(getTextTotal);
 			}
 			
 		}
-
-if(rolanMilkTea.isSelected()) {
-	
-	
-	if(small[4].isSelected()) {
-	
-		//increment
-		getQuantityValues=QuantitySmall[4].getText().toString();
-		//increment
-		getQuantities[12]=Integer.parseInt(QuantitySmall[4].getText().toString());
-		//increment
-		price[12]=getQuantities[12]*25;
-		total+=price[12];
-		
-	}
-	if(medium[4].isSelected()) {
-		//increment
-		getQuantityValues=QuantityMedium[4].getText().toString();
-		//increment
-		getQuantities[12]=Integer.parseInt(QuantityMedium[4].getText().toString());
-		//increment
-		price[12]=getQuantities[12]*35;
-		total+=price[12];
-		
-	}
-	
-	if(large[4].isSelected()) {
-	
-		//increment
-		getQuantityValues=QuantityLarge[4].getText().toString();
-		//increment
-		getQuantities[13]=Integer.parseInt(QuantityLarge[4].getText().toString());
-		//increment
-		price[13]=getQuantities[13]*45;
-		total+=price[13];
-	}
-	
-}
-
-if(pedroColdCoffee.isSelected()) {
-	
-
-	if(small[5].isSelected()) {
-		//increment
-		getQuantityValues=QuantitySmall[5].getText().toString();
-		//increment
-		getQuantities[13]=Integer.parseInt(QuantitySmall[5].getText().toString());
-		//increment
-		price[13]=getQuantities[13]*30;
-		total+=price[13];
-		
-	}
-	if(medium[5].isSelected()) {
-		//increment
-		getQuantityValues=QuantityMedium[5].getText().toString();
-		//increment
-		getQuantities[14]=Integer.parseInt(QuantityMedium[5].getText().toString());
-		//increment
-		price[14]=getQuantities[14]*40;
-		total+=price[14];
-	}
-	
-	if(large[5].isSelected()) {
-	
-		//increment
-		getQuantityValues=QuantityLarge[5].getText().toString();
-		//increment
-		getQuantities[15]=Integer.parseInt(QuantityLarge[5].getText().toString());
-		//increment
-		price[15]=getQuantities[15]*50;
-		total+=price[15];
-	
-	}
-	
-}
-
-if(jamColdBlack.isSelected()) {
-	
-	
-	if(small[6].isSelected()) {
-
-		//increment
-		getQuantityValues=QuantitySmall[6].getText().toString();
-		//increment
-		getQuantities[14]=Integer.parseInt(QuantitySmall[6].getText().toString());
-		//increment
-		price[14]=getQuantities[14]*20;
-		total+=price[14];
-	
-	}
-	if(medium[6].isSelected()) {
-		//increment
-		getQuantityValues=QuantityMedium[6].getText().toString();
-		//increment
-		getQuantities[15]=Integer.parseInt(QuantityMedium[6].getText().toString());
-		//increment
-		price[15]=getQuantities[15]*30;
-		total+=price[15];
-	}
-	
-	if(large[6].isSelected()) {
-		//increment
-		getQuantityValues=QuantityLarge[6].getText().toString();
-		//increment
-		getQuantities[16]=Integer.parseInt(QuantityLarge[6].getText().toString());
-		//increment
-		price[16]=getQuantities[16]*40;
-		total+=price[16];
-	}
-	
-}
-
-if(morielBrown.isSelected()) {
-	
-	if(small[7].isSelected()) {
-		//increment
-		getQuantityValues=QuantitySmall[7].getText().toString();
-		//increment
-		getQuantities[17]=Integer.parseInt(QuantitySmall[7].getText().toString());
-		//increment
-		price[17]=getQuantities[17]*20;
-		total+=price[17];
-		
-	}
-	if(medium[7].isSelected()) {
-		//increment
-		getQuantityValues=QuantityMedium[7].getText().toString();
-		//increment
-		getQuantities[17]=Integer.parseInt(QuantityMedium[7].getText().toString());
-		//increment
-		price[17]=getQuantities[17]*30;
-		total+=price[17];
-	}
-	
-	if(large[7].isSelected()) {
-		//increment
-		getQuantityValues=QuantityLarge[7].getText().toString();
-		//increment
-		getQuantities[17]=Integer.parseInt(QuantityLarge[7].getText().toString());
-		//increment
-		price[17]=getQuantities[17]*40;
-		total+=price[17];
-	}
-	
-}
-		getTextTotal=""+total;
-		textTotal.setText("");
-		textTotal.setText(getTextTotal);
-		total=0;
-		
 		
 	}
 	
@@ -1350,21 +1067,21 @@ public void prepareLabelTransaction(String str, int xpos, int ypos, int width, i
 	@Override
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
-		
+		preCompute();
 	}
 
 
 	@Override
 	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
-		
+		preCompute();
 	}
 
 
 	@Override
 	public void keyTyped(KeyEvent e) {
 		// TODO Auto-generated method stub
-		
+		preCompute();
 	}
 
 }
